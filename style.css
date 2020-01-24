@@ -1,0 +1,10 @@
+header {
+    text-align: center;
+    background-color: #282828;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#headerTitle{
+    color: white;
+}
