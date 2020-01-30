@@ -16,9 +16,26 @@ header {
 .container {
     float: left;
     margin-top: 10px;
+    background-color: #d3d3d3;
+    width: auto;
+
 }
 
 img {
     height: 25px;
     width: 25px;
+}
+
+#previousCities {
+    background-color:black;
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+#fiveDayForecast {
+    background-color:black;
+    text-align: center;
+    margin-top: 5px;
+    
 }
