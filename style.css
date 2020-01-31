@@ -15,9 +15,13 @@ header {
 
 .container {
     float: left;
-    margin-top: 10px;
+    margin-top: 5px;
     background-color: #d3d3d3;
-    width: auto;
+    width: 45%;
+    height: 100px;
+    border-radius: 5px;
+    border: black;
+    border-style: solid;
 
 }
 
@@ -27,15 +31,31 @@ img {
 }
 
 #currentWeather {
-    background-color:black;
+    background-color: #d3d3d3;    
     text-align: center;
-    margin-top: 10px;
+    margin-top: 100px;
+    margin: auto;
+    border-radius: 5px;
+    border: black;
+    border-style: solid;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 5px;
     
 }
 
 #fiveDayForecast {
-    background-color:black;
+    background-color: #d3d3d3;
     text-align: center;
-    margin-top: 5px;
+    margin: auto;
+    width: 50%;
+    float: right;
+    border-radius: 5px;
+    border: black;
+    border-style: solid;
     
+}
+
+p {
+    text-align: center;
 }
