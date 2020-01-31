@@ -5,18 +5,18 @@ header {
     padding-bottom: 5px;
 }
 
-#headerTitle{
+#headerTitle {
     color: white;
 }
 
-#input{
+#input {
     float: left;
 }
 
 .container {
     float: left;
     margin-top: 5px;
-    background-color:#ededed;
+    background-color: #ededed;
     width: 45%;
     height: 100px;
     border-radius: 5px;
@@ -31,7 +31,7 @@ img {
 }
 
 #currentWeather {
-    background-color:#ededed;    
+    background-color: #ededed;
     text-align: center;
     margin-top: 100px;
     margin: auto;
@@ -41,11 +41,11 @@ img {
     width: 50%;
     margin-left: 50%;
     margin-top: 5px;
-    
+
 }
 
 #fiveDayForecast {
-    background-color:#ededed;
+    background-color: #ededed;
     text-align: center;
     margin: auto;
     width: 50%;
@@ -53,7 +53,7 @@ img {
     border-radius: 5px;
     border: black;
     border-style: solid;
-    
+
 }
 
 p {
