@@ -17,7 +17,7 @@ header {
     float: left;
     margin-top: 5px;
     background-color: #ededed;
-    width: 45%;
+    width: 30%;
     height: 100px;
     border-radius: 5px;
     border: black;
@@ -25,7 +25,7 @@ header {
 
 }
 
-img {
+#img {
     height: 25px;
     width: 25px;
 }
@@ -38,8 +38,7 @@ img {
     border-radius: 5px;
     border: black;
     border-style: solid;
-    width: 50%;
-    margin-left: 50%;
+    width: 70%;
     margin-top: 5px;
 
 }
@@ -48,14 +47,32 @@ img {
     background-color: #ededed;
     text-align: center;
     margin: auto;
-    width: 50%;
+    width: 70%;
     float: right;
     border-radius: 5px;
     border: black;
     border-style: solid;
-
+    display: flex;
 }
 
 p {
     text-align: center;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.divClasses {
+    border: black solid 2px;
+    /* display: inline-block; */
+    width: 20%;
+    margin: 5px;
+    background-color: #2100d494;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
 }

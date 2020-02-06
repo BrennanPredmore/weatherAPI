@@ -14,6 +14,7 @@ $(document).ready(function () {
                 response.main.humidity
                 response.wind.speed
                 $('#cityName').text(response.name);
+                $('#weatherIcon').append(`<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png">`)
                 $('#currentTemp').text(`Temperature: ${response.main.temp}`);
                 $('#humidity').text(`Humidity: ${response.main.humidity}`);
                 $('#windSpeed').text(`Windspeed: ${response.wind.speed}`);
@@ -38,10 +39,14 @@ $(document).ready(function () {
                         var date = new Date(hour.dt_txt).toLocaleDateString();
                         hour.main.temp
                         hour.main.humidity
-                        var DIV = $('<div>');
+                        var DIV = $('<span>');
+                        var image = $('<img>')
+                        image.attr("src", `http://openweathermap.org/img/wn/${hour.weather[0].icon}.png`);
+                        DIV.addClass('divClasses');
                         DIV.append(`<h3>${date}</h3><p>Current ${hour.main.temp}</p><p>Humidity ${hour.main.humidity}</p>`);
+                        DIV.append(image);
                         $('#fiveDayForecast').append(DIV);
-
+                        
                     }
                 }
 

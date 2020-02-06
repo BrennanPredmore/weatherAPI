@@ -21,19 +21,22 @@
         <h4>Search for a city:</h4>
         <input  type="text" name="city" id="city" placeholder="City Name">
         <button id="search_btn">
-            <img src="assets/images/icons8-search-64.png" alt="searchIcon" >
+            <img src="assets/images/icons8-search-64.png" id="img" alt="searchIcon" >
         </button>
 
     </div>        
+
+    
     <div class="card" id="currentWeather">
             <h2 id="cityName"></h2>
+            <div id="weatherIcon"></div>
             <h2 id="currentTemp"></h2>
             <h2 id="humidity"></h2>
             <h2 id="windSpeed"></h2>
             <h2 id="uvIndex"></h2>
         </div>
 
-        <div class="card" id="fiveDayForecast">
+        <div id="fiveDayForecast">
 
         </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
