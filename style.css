@@ -1,3 +1,31 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+
+    /* Location of the image */
+    background-image: url('assets/images/pexels-laura-stanley-5644346.jpg');
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: #464646;
+
+}
+
 header {
     text-align: center;
     background-color: #282828;
@@ -15,7 +43,8 @@ header {
 
 .container {
     float: left;
-    margin-top: 5px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
     background-color: #ededed;
     width: 30%;
     height: 100px;
@@ -30,28 +59,41 @@ header {
     width: 25px;
 }
 
+/* CURRENT WEATHER DIV */
 #currentWeather {
     background-color: #ededed;
-    /* text-align: center; */
-    /* margin: 5px auto auto; */
     border-radius: 5px;
     border: black;
     border-style: solid;
-    width: 70%;
-    float: left;
+    width: 65%;
+    float: right;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
 }
 
+#cityName {
+    margin-left: 1rem;
+}
+
+.currentWeather {
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+
+/* FIVE DAY WEATHER */
 #fiveDayForecast {
     background-color: #ededed;
     text-align: center;
-    margin: auto;
-    width: 70%;
+    margin-right: 0.5rem;
+    width: 65%;
     float: right;
     border-radius: 5px;
     border: black;
     border-style: solid;
     display: flex;
 }
+
 
 p {
     text-align: center;
@@ -64,7 +106,6 @@ img {
 
 .divClasses {
     border: black solid 2px;
-    /* display: inline-block; */
     width: 20%;
     margin: 5px;
     background-color: #2100d494;

@@ -16,9 +16,9 @@ $(document).ready(function () {
       $('#cityName').append(
         `<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png">`
       );
-      $('#currentTemp').text(`Temperature: ${response.main.temp}` + 'º F');
-      $('#humidity').text(`Humidity: ${response.main.humidity}` + '%');
-      $('#windSpeed').text(`Windspeed: ${response.wind.speed}` + 'mph');
+      $('#currentTemp').text(`Temperature: ${response.main.temp}` + 'º F').addClass('currentWeather');
+      $('#humidity').text(`Humidity: ${response.main.humidity}` + '%').addClass('currentWeather');;
+      $('#windSpeed').text(`Windspeed: ${response.wind.speed}` + 'mph').addClass('currentWeather');;
       getForcast(userInput);
     });
   });
@@ -30,6 +30,7 @@ $(document).ready(function () {
       url: fiveDayQueryURL,
       type: 'GET',
     }).then(function (response) {
+                $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\">");
         console.log(response)
       for (var i = 0; i < response.list.length; i++) {
         var hour = response.list[i];
