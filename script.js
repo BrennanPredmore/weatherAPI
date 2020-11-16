@@ -43,7 +43,7 @@ $(document).ready(function () {
           );
           DIV.addClass('divClasses');
           DIV.append(
-            `<h3>${date}</h3><p>Current ${hour.main.temp}</p><p>Humidity ${hour.main.humidity}</p>`
+            `<h3>${date}</h3><p>Temperture <br> ${hour.main.temp + "º F"} </p><p>Humidity <br> ${hour.main.humidity + "%"}</p>`
           );
           DIV.append(image);
           $('#fiveDayForecast').append(DIV);
