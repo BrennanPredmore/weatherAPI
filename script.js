@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $('#search_btn').click(function () {
-    // console.log($('#city').val());
     var userInput = $('#city').val();
     var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
     //AJAX CALL FOR CURRENT WEATHER
@@ -16,9 +15,9 @@ $(document).ready(function () {
       $('#weatherIcon').append(
         `<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png">`
       );
-      $('#currentTemp').text(`Temperature: ${response.main.temp}`);
-      $('#humidity').text(`Humidity: ${response.main.humidity}`);
-      $('#windSpeed').text(`Windspeed: ${response.wind.speed}`);
+      $('#currentTemp').text(`Temperature: ${response.main.temp}` + 'º F');
+      $('#humidity').text(`Humidity: ${response.main.humidity}` + '%');
+      $('#windSpeed').text(`Windspeed: ${response.wind.speed}` + 'mph');
       getForcast(userInput);
     });
   });
