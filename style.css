@@ -33,13 +33,11 @@ header {
 #currentWeather {
     background-color: #ededed;
     text-align: center;
-    margin-top: 100px;
-    margin: auto;
+    margin: 5px auto auto;
     border-radius: 5px;
     border: black;
     border-style: solid;
     width: 70%;
-    margin-top: 5px;
 
 }
 
