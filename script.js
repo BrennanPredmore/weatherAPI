@@ -7,12 +7,13 @@ $(document).ready(function () {
       url: queryURL,
       type: 'GET',
     }).then(function (response) {
+        console.log(response)
       response.name;
       response.main.temp;
       response.main.humidity;
       response.wind.speed;
-      $('#cityName').text(response.name);
-      $('#weatherIcon').append(
+      $('#cityName').text(response.name + " (" + new Date().toLocaleDateString() + ")");
+      $('#cityName').append(
         `<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png">`
       );
       $('#currentTemp').text(`Temperature: ${response.main.temp}` + 'º F');
@@ -29,6 +30,7 @@ $(document).ready(function () {
       url: fiveDayQueryURL,
       type: 'GET',
     }).then(function (response) {
+        console.log(response)
       for (var i = 0; i < response.list.length; i++) {
         var hour = response.list[i];
         if (hour.dt_txt.indexOf('00:00:00') != -1) {
