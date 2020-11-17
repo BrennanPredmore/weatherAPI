@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('#search_btn').click(function () {
+  $('#search-btn').click(function () {
     var userInput = $('#city').val();
     var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
     //AJAX CALL FOR CURRENT WEATHER
