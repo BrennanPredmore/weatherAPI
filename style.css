@@ -108,10 +108,13 @@ img {
     border: black solid 2px;
     width: 20%;
     margin: 5px;
-    background-color: #2100d494;
+    background-color: #0079fb;
+    border-radius: 5%;
+    color: #fff;
 }
 
 h3 {
     font-size: 18px;
     font-weight: bold;
+    margin-top: 0.5rem;
 }

@@ -7,18 +7,26 @@ $(document).ready(function () {
       url: queryURL,
       type: 'GET',
     }).then(function (response) {
-        console.log(response)
+      console.log(response);
       response.name;
       response.main.temp;
       response.main.humidity;
       response.wind.speed;
-      $('#cityName').text(response.name + " (" + new Date().toLocaleDateString() + ")");
+      $('#cityName').text(
+        response.name + ' (' + new Date().toLocaleDateString() + ')'
+      );
       $('#cityName').append(
         `<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png">`
       );
-      $('#currentTemp').text(`Temperature: ${response.main.temp}` + 'º F').addClass('currentWeather');
-      $('#humidity').text(`Humidity: ${response.main.humidity}` + '%').addClass('currentWeather');;
-      $('#windSpeed').text(`Windspeed: ${response.wind.speed}` + 'mph').addClass('currentWeather');;
+      $('#currentTemp')
+        .text(`Temperature: ${response.main.temp}` + 'º F')
+        .addClass('currentWeather');
+      $('#humidity')
+        .text(`Humidity: ${response.main.humidity}` + '%')
+        .addClass('currentWeather');
+      $('#windSpeed')
+        .text(`Windspeed: ${response.wind.speed}` + 'mph')
+        .addClass('currentWeather');
       getForcast(userInput);
     });
   });
@@ -30,8 +38,10 @@ $(document).ready(function () {
       url: fiveDayQueryURL,
       type: 'GET',
     }).then(function (response) {
-                $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\">");
-        console.log(response)
+      $('#forecast')
+        .html('<h4 class="mt-3">5-Day Forecast:</h4>')
+        .append('<div class="row">');
+      console.log(response);
       for (var i = 0; i < response.list.length; i++) {
         var hour = response.list[i];
         if (hour.dt_txt.indexOf('00:00:00') != -1) {
@@ -45,10 +55,13 @@ $(document).ready(function () {
             `http://openweathermap.org/img/wn/${hour.weather[0].icon}.png`
           );
           DIV.addClass('divClasses');
-          DIV.append(
-            `<h3>${date}</h3><p>Temperture <br> ${hour.main.temp + "º F"} </p><p>Humidity <br> ${hour.main.humidity + "%"}</p>`
-          );
+          DIV.append(`<h3>${date}</h3>`);
           DIV.append(image);
+          DIV.append(
+            `<p>Temperture <br>  ${
+              hour.main.temp + 'º F'
+            } </p><p>Humidity <br> ${hour.main.humidity + '%'}</p>`
+          );
           $('#fiveDayForecast').append(DIV);
         }
       }
