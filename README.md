@@ -25,9 +25,9 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Links:
-https://github.com/BrennanPredmore/weatherAPI
+[GitHub Repo](https://github.com/BrennanPredmore/weatherAPI)
 
-https://brennanpredmore.github.io/weatherAPI/
+[Github Pages](https://brennanpredmore.github.io/weatherAPI/)
 
 ## License
 No License required. These are public pages. 
