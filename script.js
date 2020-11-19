@@ -1,7 +1,8 @@
 $(document).ready(function () {
   $('#searchBtn').click(function () {
-    var userInput = $('#city').val();
-    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
+    const userInput = $('#city').val();
+
+    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
     //AJAX CALL FOR CURRENT WEATHER
     $.ajax({
       url: queryURL,
@@ -32,7 +33,7 @@ $(document).ready(function () {
   });
 
   function getForcast(input) {
-    var fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
+    let fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
     // AJAX CALL FOR FIVE DAY FORECAST
     $.ajax({
       url: fiveDayQueryURL,
@@ -42,14 +43,14 @@ $(document).ready(function () {
         .html('<h4 class="mt-3">5-Day Forecast:</h4>')
         .append('<div class="row">');
       console.log(response);
-      for (var i = 0; i < response.list.length; i++) {
-        var hour = response.list[i];
+      for (let i = 0; i < response.list.length; i++) {
+        let hour = response.list[i];
         if (hour.dt_txt.indexOf('00:00:00') != -1) {
-          var date = new Date(hour.dt_txt).toLocaleDateString();
+          let date = new Date(hour.dt_txt).toLocaleDateString();
           hour.main.temp;
           hour.main.humidity;
-          var DIV = $('<span>');
-          var image = $('<img>');
+          let DIV = $('<span>');
+          let image = $('<img>');
           image.attr(
             'src',
             `http://openweathermap.org/img/wn/${hour.weather[0].icon}.png`
