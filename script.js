@@ -1,8 +1,8 @@
 $(document).ready(function () {
+      const myKey = '3378373f3ab215405fc8140860945152'
   $('#searchBtn').click(function () {
-    const userInput = $('#city').val();
-
-    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
+    let userInput = $('#city').val();
+    let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&units=imperial&appid=${myKey}`;
     //AJAX CALL FOR CURRENT WEATHER
     $.ajax({
       url: queryURL,
@@ -33,7 +33,7 @@ $(document).ready(function () {
   });
 
   function getForcast(input) {
-    let fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&units=imperial&appid=3378373f3ab215405fc8140860945152`;
+    let fiveDayQueryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&units=imperial&appid=${myKey}`;
     // AJAX CALL FOR FIVE DAY FORECAST
     $.ajax({
       url: fiveDayQueryURL,
