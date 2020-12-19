@@ -12,7 +12,7 @@ SO THAT I can plan a trip accordingly
 ````
 ## Github pages / Repo:
 
-[Github Repo](https://brennanpredmore.github.io/weatherAPI/)
+[Github Repo](https://github.com/BrennanPredmore/weatherAPI)
 
 [Github Pages](https://brennanpredmore.github.io/weatherAPI/)
 
